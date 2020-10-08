@@ -11,11 +11,11 @@
     </div>
     <script>
       // DOMを取得
-      var button = document.getElementById('button');
-      var result = document.getElementById('result');
-      var count = 0;
+      var button = document.getElementById('button'); //イベントを設定する要素を取得
+      var result = document.getElementById('result'); //結果を表示するエリアを取得
+      var count = 0; // クリックカウンター
 
-      // イベントのバインド
+      // イベントの登録
       button.addEventListener('click', function(){
         result.textContent = 'ボタンを' + ++count + '回クリックしました。';
       });

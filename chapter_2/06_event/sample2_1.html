@@ -12,12 +12,8 @@
     <script>
       var field = document.getElementById('field');
 
-      field.addEventListener('keydown', function() {
-        console.log('入力開始： ' + field.value.length + '文字入力しています...');
-      });
-
       field.addEventListener('keyup', function() {
-        console.log('入力終了： ' + field.value.length + '文字入力しています...');
+        console.log(field.value.length + '文字入力しています...');
       });
     </script>
   </body>

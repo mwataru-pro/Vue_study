@@ -60,7 +60,7 @@
       parent.addEventListener('click',() => console.log('親がクリックされました'));
       child.addEventListener('click',() => {
         console.log('子がクリックされました');
-        event.stopPropagation(); // stopPropagationを指定しても、このままではリンク先遷移してしまう
+        event.stopPropagation(); // stopPropagationを指定しても、このままではコンソールログ出力の後リンク先遷移してしまう
       });
     </script>
   </body>

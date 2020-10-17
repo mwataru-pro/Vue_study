@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>sample</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!-- メソッドと算出プロパティの違い -->
+  <button @click="flg = !flg">表示切り替え</button>
+  <p v-if="flg">
+    <!-- 表示切り替えボタンごとに表示/非表示を切り替える -->
+    メソッド： {{ method() }} <br />
+    算出プロパティ： {{ prop }}
+  </p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      flg: true
+    },
+    methods: {
+      method() {
+        return new Date().toLocaleString(); //表示のたびに再計算される
+      }
+    },
+    computed: {
+      prop() {
+        return new Date().toLocaleString(); //Dateオブジェクトは初期表示から変化しない
+      }
+    }
+  });
+</script>
+</body>
+</html>

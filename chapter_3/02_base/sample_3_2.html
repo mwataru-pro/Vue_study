@@ -11,13 +11,13 @@
       <div v-show="isActive">アクティブです!</div>
       <div v-show="!isActive" :style="{color: 'gray'}">...非アクティブ...</div>
     </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          isActive: true
+        }
+      });
+    </script>
   </body>
-  <script>
-    new Vue({
-      el: "#app",
-      data: {
-        isActive: true
-      }
-    });
-  </script>
 </html>

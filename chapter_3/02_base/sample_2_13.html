@@ -7,8 +7,8 @@
 </head>
 <body>
 <div id="app">
-  <!-- classのバインディング① -->
-  <div v-bind:class="{ active: isActive, error: hasError }">classバインディング</div>
+  <!-- classのバインディング② -->
+  <div class="static" v-bind:class="{ active: isActive, error: hasError }">classのマージ</div>
 </div>
 <script>
   new Vue({
